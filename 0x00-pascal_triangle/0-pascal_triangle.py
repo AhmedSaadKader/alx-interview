@@ -4,6 +4,14 @@ Pascal triangle
 """
 
 def pascal_triangle(n):
+    """pascal_triangle function
+
+    Args:
+        n (number): the number
+
+    Returns:
+        list: list
+    """
     if n <= 0:
         return []
 
