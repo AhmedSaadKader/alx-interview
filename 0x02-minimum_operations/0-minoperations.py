@@ -22,7 +22,7 @@ def minOperations(n: int) -> int:
         if n % divisor == 0:
             number_of_operations += divisor
             n //= divisor
-            root -= 1
+            divisor -= 1
         divisor += 1
 
     return number_of_operations
