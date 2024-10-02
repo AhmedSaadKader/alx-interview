@@ -12,9 +12,6 @@ def island_perimeter(land_grid):
     Determines the perimeter of the island in the given grid.
     """
 
-    perimeter = 0
-    rows, cols = len(land_grid), len(land_grid[0])
-
     p = 0
     for i in range(len(grid)):
         for j in range(len(grid[i])):
