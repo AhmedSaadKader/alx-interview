@@ -12,16 +12,20 @@ def island_perimeter(land_grid):
     Determines the perimeter of the island in the given grid.
     """
 
-    p = 0
-    for i in range(len(grid)):
-        for j in range(len(grid[i])):
-            if (grid[i][j] == 1):
-                if (i <= 0 or grid[i - 1][j] == 0):
-                    p += 1
-                if (i >= len(grid) - 1 or grid[i + 1][j] == 0):
-                    p += 1
-                if (j <= 0 or grid[i][j - 1] == 0):
-                    p += 1
-                if (j >= len(grid[i]) - 1 or grid[i][j + 1] == 0):
-                    p += 1
-    return p
+    perimeter = 0
+    rows, cols = len(land_grid), len(land_grid[0])
+
+    for row in range(rows):
+        for col in range(cols):
+            if land_grid[row][col] == 1:
+                perimeter += 4
+                if row > 0 and land_grid[row - 1][col] == 1:
+                    perimeter -= 2
+                if row < rows - 1 and land_grid[row + 1][col] == 1:
+                    perimeter -= 2
+                if col > 0 and land_grid[row][col - 1] == 1:
+                    perimeter -= 2
+                if col < cols - 1 and land_grid[row][col + 1] == 1:
+                    perimeter -= 2
+
+    return perimeter
