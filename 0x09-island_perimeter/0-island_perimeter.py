@@ -7,7 +7,7 @@ This script calculates the perimeter of a 2D island
 """
 
 
-def calculate_island_perimeter(land_grid):
+def island_perimeter(land_grid):
     """
     Determines the perimeter of the island in the given grid.
     """
